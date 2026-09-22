@@ -1,4 +1,4 @@
-package lw01.unguided;
+package lw01.lw1.unguided;
 
 public class MotorcycleWash extends WashService {
 

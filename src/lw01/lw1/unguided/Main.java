@@ -1,4 +1,4 @@
-package lw01.unguided;
+package lw01.lw1.unguided;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner scanner = new Scanner(new File("washes.txt"));
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("washes.txt"));
 
         int total = scanner.nextInt();
 
