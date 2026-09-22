@@ -1,3 +1,5 @@
+package lw01.lw1.prelab;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

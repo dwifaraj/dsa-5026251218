@@ -1,14 +1,24 @@
-public abstract class PrintJob implements Chargeable {
-    protected String id;
-    protected int pages;
+package lw01.lw1.prelab;
 
-    public PrintJob(String id, int pages) {
+public abstract class PrintJob implements Chargeable {
+    private String id;
+    private int pages;
+
+    protected PrintJob(String id, int pages) {
         if (pages <= 0) {
             throw new IllegalArgumentException("Pages must be greater than 0");
         }
 
         this.id = id;
         this.pages = pages;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getPages() {
+        return pages;
     }
 
     @Override

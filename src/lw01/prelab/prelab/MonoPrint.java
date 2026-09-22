@@ -1,12 +1,13 @@
-public class MonoPrint extends PrintJob {
+package lw01.lw1.prelab;
 
+public class MonoPrint extends PrintJob {
     public MonoPrint(String id, int pages) {
         super(id, pages);
     }
 
     @Override
     public int calculateCharge() {
-        return pages * 500;
+        return getPages() * 500;
     }
 
     @Override
