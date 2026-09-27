@@ -1,4 +1,4 @@
-package lw2.prelabb;
+package lw2.prelab;
 
 import java.util.*;
 
@@ -13,9 +13,9 @@ public class Main {
 
         while (scanner.hasNext()) {
             String[] transaction = new String[3];
-            transaction[0] = scanner.next(); //raisa
-            transaction[1] = scanner.next(); // deposit
-            transaction[2] = scanner.next(); // 10000 
+            transaction[0] = scanner.next(); // name
+            transaction[1] = scanner.next(); // type
+            transaction[2] = scanner.next(); // amount
 
             transactions.add(transaction);
         }
