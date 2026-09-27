@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner scanner = new Scanner(Main.class.getResourceAsStream("washes.txt"));
+        Scanner scanner = new Scanner(
+            new File("src/lw01/lw1/unguided/washes.txt")
+        );
 
         int total = scanner.nextInt();
 
