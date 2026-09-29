@@ -39,7 +39,6 @@ public class Main {
         q.addAll(orders);
 
         while (!q.isEmpty()) {
-
             String[] order = q.poll();
 
             String food = order[1];
@@ -52,7 +51,6 @@ public class Main {
                 for (String[] data : foods) {
                     if (data[0].equals(food)) {
                         int stock = Integer.parseInt(data[1]);
-
                         if (stock <= 0) {
                             foodAvailable = false;
                         }
@@ -60,23 +58,18 @@ public class Main {
                     }
                 }
             }
-
             if (!drink.equals("-")) {
                 for (String[] data : drinks) {
                     if (data[0].equals(drink)) {
                         int stock = Integer.parseInt(data[1]);
-
                         if (stock <= 0) {
                             drinkAvailable = false;
                         }
-
                         break;
                     }
                 }
             }
-
             if (foodAvailable && drinkAvailable) {
-
                 if (!food.equals("-")) {
                     for (String[] data : foods) {
                         if (data[0].equals(food)) {
@@ -87,7 +80,6 @@ public class Main {
                         }
                     }
                 }
-
                 if (!drink.equals("-")) {
                     for (String[] data : drinks) {
                         if (data[0].equals(drink)) {
@@ -98,48 +90,30 @@ public class Main {
                         }
                     }
                 }
-
                 successful.add(order);
-
             } else {
                 fails.push(order);
             }
         }
-
         System.out.println("=== Successfully Processed Orders ===");
-
         for (String[] order : successful) {
-            System.out.println(
-                order[0] + " " +
-                order[1] + " " +
-                order[2] + " " +
-                order[3]
-            );
+            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]);
         }
-
         System.out.println("=== Remaining Food Stock ===");
 
         for (String[] data : foods) {
             System.out.println(data[0] + " : " + data[1]);
         }
-
         System.out.println("=== Remaining Drink Stock ===");
 
         for (String[] data : drinks) {
             System.out.println(data[0] + " : " + data[1]);
         }
-
         System.out.println("=== Failed Orders ===");
 
         while (!fails.isEmpty()) {
             String[] order = fails.pop();
-
-            System.out.println(
-                order[0] + " " +
-                order[1] + " " +
-                order[2] + " " +
-                order[3]
-            );
+            System.out.println(order[0] + " " + order[1] + " " + order[2] + " " + order[3]);
         }
     }
 }
