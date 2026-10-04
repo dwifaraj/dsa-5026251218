@@ -1,4 +1,4 @@
-package lw2.lw2.unguided;
+package lw02.lw2.unguided;
 
 import java.util.*;
 

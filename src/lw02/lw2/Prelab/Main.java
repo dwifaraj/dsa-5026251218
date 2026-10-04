@@ -1,4 +1,4 @@
-package lw2.lw2.Prelab;
+package lw02.lw2.Prelab;
 
 import java.util.*;
 
